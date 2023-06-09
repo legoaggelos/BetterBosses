@@ -46,7 +46,7 @@ public class ItemInit
 	public static final Item TUNGSTEN_PLATE = new TungstenIngot("tungsten_plate"); //item
 	public static final Item CHICKSTEAK = new PorkSouvlaki("chicksteak", 14, 8.0f, true); //food
 	public static final Item PORKCHICK = new PorkSouvlaki("porkchick", 14, 8.0f, true); //food
-	public static final Item LACTA = new PorkSouvlaki("lacta_chocolate_bar", 8, 0.0f, false); //food
+	public static final Item LUCTA = new PorkSouvlaki("lucta_chocolate_bar", 8, 0.0f, false); //food
 	public static final Item PORK_SOUVLAKI = new PorkSouvlaki("pork_souvlaki", 16, 6.0f, false); //food
 	public static final Item HELMET_TUNGSTEN = new HelmetTungsten("helmet_tungsten", ARMOR_TUNGSTEN, 1, EntityEquipmentSlot.HEAD); //helmet
 	public static final Item CHESTPLATE_TUNGSTEN = new ChestplateTungsten("chestplate_tungsten", ARMOR_TUNGSTEN, 1, EntityEquipmentSlot.CHEST); //chest

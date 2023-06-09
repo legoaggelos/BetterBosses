@@ -114,7 +114,7 @@ public class LootTableEvent
 		if(event.getEntityLiving() instanceof EntityElderGuardian) 
 			
 		{
-			if(rand.nextInt(3)==0) {
+			if(rand.nextInt(2)==0) {
 				event.getEntityLiving().entityDropItem(new ItemStack(Items.DIAMOND), 0.0f);
 			}
 			
