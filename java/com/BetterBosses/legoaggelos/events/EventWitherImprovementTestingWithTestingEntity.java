@@ -35,17 +35,18 @@ public class EventWitherImprovementTestingWithTestingEntity {
 		Entity entity = event.getEntity();
 		World world = event.getWorld();
 		
+		
 		BlockPos pos = new BlockPos(entity);
 		BlockPos pos1 = new BlockPos(entity);
-	pos.add(entity.posX, entity.posY - 2, entity.posZ) ;
-		pos1.add(entity.posX, entity.posY - 1, entity.posZ) ;
+	BlockPos tpos = pos.add(entity.posX, entity.posY - 2, entity.posZ);
+	BlockPos tpos1 = pos1.add(entity.posX, entity.posY - 1, entity.posZ);
 		
 		
 		
-if(entity.equals(Reference.ENTITY_TESTING)==true) {
+if(entity.equals(Reference.ENTITY_TESTING) ==true) {
 	
-		world.setBlockState(pos, Blocks.OBSIDIAN.getDefaultState());
-		world.setBlockState(pos1, Blocks.OBSIDIAN.getDefaultState());
+		world.setBlockState(tpos, Blocks.OBSIDIAN.getDefaultState());
+		world.setBlockState(tpos1, Blocks.OBSIDIAN.getDefaultState());
 	}
 }
 		
