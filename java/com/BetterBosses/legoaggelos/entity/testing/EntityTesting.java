@@ -5,8 +5,10 @@ import com.BetterBosses.legoaggelos.util.handlers.SoundsHandler;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWanderAvoidWater;
+import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
@@ -24,7 +26,7 @@ public EntityTesting(World worldIn) {
 @Override
 protected void initEntityAI()
 {
-	this.tasks.addTask(1, new EntityAIWanderAvoidWater(this, 0.30));
+	this.tasks.addTask(0, new EntityTesting.AIDoNothing());
 }
 @Override
 protected void applyEntityAttributes() 
@@ -56,5 +58,21 @@ protected SoundEvent getHurtSound(DamageSource damageSourceIn)
 protected boolean canDropLoot() 
 {
 	return true;
+}
+public int getInvulTime()
+{
+    return 0;
+}
+class AIDoNothing extends EntityAIBase
+{
+    public AIDoNothing()
+    {
+        this.setMutexBits(7);
+    }
+    public boolean shouldExecute()
+    {
+        return EntityTesting.this.getInvulTime() > 0;
+    }
+
 }
 }
